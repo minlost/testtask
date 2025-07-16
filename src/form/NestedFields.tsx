@@ -39,7 +39,7 @@ interface NestedInputsInterface {
     const amount = initialValues.amount;
 
 
-  export   const additionScheme = z.object({
+  export  const additionScheme = z.object({
         allocation: z.number().min(0, "error").max(amount, `Allocation cannot exceed ${amount}`),
         category: z.string().min(1, ' required'),
         witnesses: z.array(
